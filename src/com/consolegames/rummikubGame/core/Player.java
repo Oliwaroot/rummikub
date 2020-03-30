@@ -182,7 +182,9 @@ public class Player {
                 int tileValue = Integer.parseInt(matcher1.group(1))*10+Integer.parseInt(matcher1.group(2)) - 1;
                 addPlayedTiles(rowValue, columnValue);
 
-                if(tileValue>=playerHand.size()){
+                if(tileValue>=playerHand.size() || tileValue<1){
+                    field.generateBoard();
+                    System.out.println();
                     System.out.println("No such tile on hand.");
                     playHand(m, tiles, field, fullMenu, x);
                 }
@@ -261,8 +263,9 @@ public class Player {
                 pickTile(tiles);
             }
             else{
+                field.generateBoard();
+                System.out.println();
                 System.out.println("No such entry. Please retry.");
-                showPlayerHand();
                 playHand(m, tiles, field, fullMenu, x);
             }
         }
