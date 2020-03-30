@@ -151,11 +151,14 @@ public class Player {
 
     public void showPlayerHand(){
         System.out.println();
-        for(int i=1; i<=9; i++){
-            System.out.print("  0"+i+"   ");
-        }
-        for(int i=10; i<=playerHand.size(); i++){
-            System.out.print("  "+i+"   ");
+
+        for(int i=1; i<=playerHand.size(); i++){
+            if (i<=9){
+                System.out.print("  0"+i+"   ");
+            }
+            else {
+                System.out.print("  "+i+"   ");
+            }
         }
         System.out.println();
         System.out.println(playerHand);
@@ -182,7 +185,7 @@ public class Player {
                 int tileValue = Integer.parseInt(matcher1.group(1))*10+Integer.parseInt(matcher1.group(2)) - 1;
                 addPlayedTiles(rowValue, columnValue);
 
-                if(tileValue>=playerHand.size() || tileValue<1){
+                if(tileValue>=playerHand.size() || tileValue<0){
                     field.generateBoard();
                     System.out.println();
                     System.out.println("No such tile on hand.");
@@ -191,6 +194,7 @@ public class Player {
                 else{
                     if(!field.setTile(rowValue, columnValue, playerHand.get(tileValue))){
                         field.generateBoard();
+                        System.out.println();
                         System.out.println("Location has a tile.");
                         playHand(m, tiles, field, fullMenu, x);
                     }
@@ -208,6 +212,7 @@ public class Player {
                 if(listOfPlayedTiles.contains(rowValue+" "+columnValue)){
                     if(!field.checkTile(rowValue, columnValue)){
                         field.generateBoard();
+                        System.out.println();
                         System.out.println("Location is empty.");
                         playHand(m, tiles, field, fullMenu, x);
                     }
@@ -242,6 +247,7 @@ public class Player {
                 else {
                     if(field.checkTile(rowValue2, columnValue2)){
                         field.generateBoard();
+                        System.out.println();
                         System.out.println("Destination location is filled.");
                         playHand(m, tiles, field, fullMenu, x);
                     }
@@ -259,6 +265,7 @@ public class Player {
                 System.exit(0);
             }
             else if ("P".equals(play)){
+                System.out.println();
                 System.out.println("Picking Tile...");
                 pickTile(tiles);
             }
@@ -287,13 +294,16 @@ public class Player {
                 int tileValue = Integer.parseInt(matcher1.group(1))*10+Integer.parseInt(matcher1.group(2)) - 1;
                 addPlayedTiles(rowValue,columnValue);
 
-                if(tileValue>=playerHand.size()){
+                if(tileValue>=playerHand.size() || tileValue<0){
+                    field.generateBoard();
+                    System.out.println();
                     System.out.println("No such tile on hand.");
                     playHand(m, tiles, field, fullMenu, x);
                 }
                 else{
                     if(!field.setTile(rowValue, columnValue, playerHand.get(tileValue))){
                         field.generateBoard();
+                        System.out.println();
                         System.out.println("Location has a tile.");
                         playHand(m, tiles, field, fullMenu, x);
                     }
@@ -310,6 +320,7 @@ public class Player {
                     if(listOfPlayedTiles.contains(rowValue+" "+columnValue)){
                         if(!field.checkTile(rowValue, columnValue)){
                             field.generateBoard();
+                            System.out.println();
                             System.out.println("Location is empty.");
                             playHand(m, tiles, field, fullMenu, x);
                         }
@@ -335,12 +346,14 @@ public class Player {
                 int columnValue2 = Integer.parseInt(matcher3.group(5))*10+Integer.parseInt(matcher3.group(6));
                 if(!field.checkTile(rowValue, columnValue)){
                     field.generateBoard();
+                    System.out.println();
                     System.out.println("Source location is empty.");
                     playHand(m, tiles, field, fullMenu, x);
                 }
                 else {
                     if(field.checkTile(rowValue2, columnValue2)){
                         field.generateBoard();
+                        System.out.println();
                         System.out.println("Destination location is filled.");
                         playHand(m, tiles, field, fullMenu, x);
                     }
@@ -353,6 +366,7 @@ public class Player {
                 }
             }
             else if ("X".equals(play)){
+                System.out.println();
                 System.out.println("The game has exited successfully.");
                 System.exit(0);
             }
@@ -401,6 +415,8 @@ public class Player {
                 }
             }
             else{
+                field.generateBoard();
+                System.out.println();
                 System.out.println("No such option. Please retry.");
                 playHand(m, tiles, field, fullMenu, x);
             }
