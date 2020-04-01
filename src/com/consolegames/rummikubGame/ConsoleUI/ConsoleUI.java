@@ -11,6 +11,11 @@ import java.util.Scanner;
 
 public class ConsoleUI {
 
+    public void runGame(){
+        ConsoleUI ui = new ConsoleUI();
+        ui.startGame();
+    }
+
     int counter = 0;
 
     public void startGame(){
@@ -39,7 +44,26 @@ public class ConsoleUI {
                     if(currentPlayer[i].playerHand.size()==0){
                         field.state = GameState.SOLVED;
                         System.out.println(currentPlayer[i].getName()+" is the winner.");
-                        System.exit(0);
+                        System.out.println();
+                        boolean playAgain = false;
+                        do{
+                            System.out.println("Do you wish to start a new game?");
+                            Scanner scanner = new Scanner(System.in);
+                            String newVal = scanner.nextLine();
+                            if(newVal.equals("Y")){
+                                playAgain = true;
+                                runGame();
+                            }
+                            else if (newVal.equals("N")){
+                                playAgain = true;
+                                System.exit(0);
+                            }
+                            else {
+                                System.out.println();
+                                System.out.println("Not a valid entry. Try Again.");
+                                System.out.println();
+                            }
+                        }while (!playAgain);
                     }
                 }
             }
@@ -66,8 +90,28 @@ public class ConsoleUI {
                     field.generateBoard();
                     if(currentPlayer[i].playerHand.size()==0){
                         field.state = GameState.SOLVED;
+                        System.out.println();
                         System.out.println(currentPlayer[i].getName()+" is the winner.");
-                        System.exit(0);
+                        System.out.println();
+                        boolean playAgain = false;
+                        do{
+                            System.out.println("Do you wish to start a new game?");
+                            Scanner scanner = new Scanner(System.in);
+                            String newVal = scanner.nextLine();
+                            if(newVal.equals("Y")){
+                                playAgain = true;
+                                runGame();
+                            }
+                            else if (newVal.equals("N")){
+                                playAgain = true;
+                                System.exit(0);
+                            }
+                            else {
+                                System.out.println();
+                                System.out.println("Not a valid entry. Try Again.");
+                                System.out.println();
+                            }
+                        }while (!playAgain);
                     }
                 }
             }
@@ -96,8 +140,26 @@ public class ConsoleUI {
                     field.generateBoard();
                     if(currentPlayer[i].playerHand.size()==0){
                         field.state = GameState.SOLVED;
-                        System.out.println(currentPlayer[i].getName()+" is the winner.");
-                        System.exit(0);
+                        System.out.println();
+                        boolean playAgain = false;
+                        do{
+                            System.out.println("Do you wish to start a new game?");
+                            Scanner scanner = new Scanner(System.in);
+                            String newVal = scanner.nextLine();
+                            if(newVal.equals("Y")){
+                                playAgain = true;
+                                runGame();
+                            }
+                            else if (newVal.equals("N")){
+                                playAgain = true;
+                                System.exit(0);
+                            }
+                            else {
+                                System.out.println();
+                                System.out.println("Not a valid entry. Try Again.");
+                                System.out.println();
+                            }
+                        }while (!playAgain);
                     }
                 }
             }

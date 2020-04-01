@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4bdada89-bc1c-420c-8404-ee1a27af37e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rummikubGame/com/consolegames/rummikubGame/core/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rummikubGame/com/consolegames/rummikubGame/core/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/consolegames/rummikubGame/core/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/consolegames/rummikubGame/core/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +28,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="D:/Documents/rummikubGame" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -62,26 +63,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="588" key="GridCell.Tab.0.bottom" timestamp="1585549634097">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1585589228371">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="588" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585549634097" />
-    <state width="1323" height="588" key="GridCell.Tab.0.center" timestamp="1585549634097">
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1585589228371" />
+    <state width="1323" height="588" key="GridCell.Tab.0.bottom" timestamp="1585589028744">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="588" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585549634097" />
-    <state width="1323" height="588" key="GridCell.Tab.0.left" timestamp="1585549634097">
+    <state width="1323" height="588" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585589028744" />
+    <state width="1323" height="588" key="GridCell.Tab.0.center" timestamp="1585589028744">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="588" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585549634097" />
-    <state width="1323" height="588" key="GridCell.Tab.0.right" timestamp="1585549634097">
+    <state width="1323" height="588" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585589028744" />
+    <state width="1323" height="588" key="GridCell.Tab.0.left" timestamp="1585589028743">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="588" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585549634097" />
-    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1585492402251">
+    <state width="1323" height="588" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585589028743" />
+    <state width="1323" height="588" key="GridCell.Tab.0.right" timestamp="1585589028744">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585492402251" />
+    <state width="1323" height="588" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585589028744" />
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1585589209260">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585589209260" />
     <state x="339" y="172" key="run.anything.popup" timestamp="1585296042010">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

@@ -279,8 +279,8 @@ public class Player {
         else{
             showPlayerHand();
             System.out.println();
-            System.out.print("Enter play (e.g. 05A01, A03, B08C07, M, X): ");
-            System.out.println("\n M - Meld\n X - Exit Game");
+            System.out.print("Enter play (e.g. 05A01, A03, B08C07, M, X, P): ");
+            System.out.println("\n P - Pick Tile \n M - Meld\n X - Exit Game");
 
             String play = new Scanner(System.in).nextLine().trim().toUpperCase();
 
@@ -369,6 +369,26 @@ public class Player {
                 System.out.println();
                 System.out.println("The game has exited successfully.");
                 System.exit(0);
+            }
+            else if ("P".equals(play)){
+                if (listOfPlayedTiles.size() == 0){
+                    System.out.println();
+                    System.out.println("Picking Tile...");
+                    pickTile(tiles);
+                }
+                else{
+                    for (String listOfPlayedTile : listOfPlayedTiles) {
+                        String[] playedTileGroup = listOfPlayedTile.split("", 3);
+                        int row = Integer.parseInt(playedTileGroup[0]);
+                        int column = Integer.parseInt(playedTileGroup[2]);
+                        playerHand.add(field.gameBoard[row][column]);
+                        field.resetTile(row, column);
+                    }
+                    listOfPlayedTiles.clear();
+                    System.out.println();
+                    System.out.println("Picking Tile...");
+                    pickTile(tiles);
+                }
             }
             else if ("M".equals(play)){
                 if (field.checkIfEmpty()){
